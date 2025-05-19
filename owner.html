@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirect to Owner Panel</title>
+    <script>
+        // Check if the page is being accessed from GitHub Pages (or any online source)
+        if (window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1') {
+            // Redirect to the local admin page
+            window.location.href = "http://localhost/database/owner_p.php";
+        } else {
+           //  The user is already on localhost, no need to redirect.  You could
+           //  display a message, or do nothing.  For this example, we'll
+           //  display a message.
+           document.write("<p>You are already on the local server.</p>");
+        }
+    </script>
+</head>
+<body>
+    <noscript>
+        <p>
+            <strong>
+            JavaScript is disabled in your browser.
+            </strong>
+        </p>
+         <p>
+            If you are not automatically redirected, you can use this link:
+            <a href="http://localhost/database/owner_p.php">
+                Local Admin Page
+            </a>
+        </p>
+    </noscript>
+</body>
+</html>
